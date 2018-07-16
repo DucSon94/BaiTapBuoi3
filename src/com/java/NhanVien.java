@@ -86,7 +86,7 @@ public class NhanVien {
     
     public void hienThongTin(){
         
-        System.out.println("Ma: " + this.getMaHienTai()+"\t Ten: " + this.getTen() + "\t GioiTinh: " + this.getGioiTinh());
+        System.out.println("Ma: " + this.getMaHienTai()+"\t Ten: " + this.getTen() + "\t GioiTinh: " + this.getGioiTinh().getTenGioiTinh());
         
     }
     

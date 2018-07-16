@@ -18,61 +18,35 @@ public class Test {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-//        System.out.println("nhap gioi tinh");
-//        int ma= new Scanner(System.in).nextInt();
-//        switch(ma){
-//            case 1:
-//                GioiTinh gt1 = GioiTinh.NU;
-//                break;
-//            case 2:
-//                GioiTinh gt2 = GioiTinh.NAM;
-//                break;
-//            case 3:
-//                GioiTinh gt3 = GioiTinh.GIOITINHKHAC;
-//                
-//                break;
-//                
-//        }
-//        GioiTinh gt1 = GioiTinh.NAM;
-//                System.out.println(gt1.getMa());
-//            NhanVien nv1 = new NhanVien();
-//            nv1.nhapThongTin();
-//            nv1.hienThongTin();
+
         QuanLyNhanVien qlnv = new QuanLyNhanVien();
         boolean check = true;
-        while(check){
+        while (check) {
             qlnv.hienMenu();
             int chon = new Scanner(System.in).nextInt();
-            switch(chon){
+            switch (chon) {
+
                 case 1:
-                    while(true){
-                   qlnv.menuCon();
-                   int chon1 = new Scanner(System.in).nextInt();
-                    switch(chon1){
-                        case 1:
-                            System.out.println("nhap so luong nhan vien");
-                            int soluong = new Scanner(System.in).nextInt();
-                            qlnv.taoDanhSach(soluong);
-                            break;
-                        case 2:
-                            qlnv.taoNhanVien();
-                            break;
-                        default:
-                            System.out.println("vui long chon muc 1 hoac 2");
-                            break;
-                    }
+                    qlnv.nhapDanhSachSinhVien();
                     break;
-                        
-                    }
+
                 case 2:
                     qlnv.hienThongTinCacNhanvien();
                     break;
-                     case 3:
-            check=false;
-                   
+                case 3:
+                    qlnv.sapXepTenTheoGioiTinh();
+
+                    break;
+                case 4:
+                    System.out.println("Cam on ban da su dung phan mem");
+                    check = false;
+                default:
+                    System.out.println("vui long chon muc 1 , hoac 2 hoac 3 hoac 4");
+                    break;
+
             }
-           
+
         }
     }
-    
+
 }
